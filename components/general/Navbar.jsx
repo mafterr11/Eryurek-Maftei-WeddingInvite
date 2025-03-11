@@ -27,11 +27,9 @@ const links = [
 
 const Navbar = () => {
   return (
-    <div className="h-screen md:w-[22rem] bg-accentGreen bg-center bg-no-repeat bg-cover fixed top-0 left-0 z-50 flex-shrink-0">
+    <div className="max-md:hidden h-screen md:w-[22rem] bg-accentGreen bg-center bg-no-repeat bg-cover fixed top-0 left-0 z-50 flex-shrink-0">
       {/* Main inside wrapper */}
       <div className="flex flex-col items-center justify-between py-16 h-full">
-        {/* Top part wrapper */}
-        <div className="flex flex-col items-center justify-center gap-y-18">
           {/* Name Date */}
           <div className="flex flex-col items-center">
             <div className="relative w-28 h-12">
@@ -48,7 +46,7 @@ const Navbar = () => {
             <div>30 Mai 2026</div>
           </div>
           {/* Link list */}
-          <div className="flex flex-col items-center justify-center space-y-3">
+          <div className="flex flex-col items-center justify-center space-y-7">
             {links.map((link, index) => (
               <Link
                 key={index}
@@ -59,7 +57,6 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
-        </div>
 
         {/* Bottom part */}
         <div>

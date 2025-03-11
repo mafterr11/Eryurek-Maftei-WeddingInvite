@@ -1,6 +1,7 @@
 import { Alex_Brush, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/general/Navbar";
+import MobileNav from "@/components/general/MobileNav";
 
 const libreBaskerville = Libre_Baskerville({
   variable: "--font-libreBaskerville",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
         <div className="md:flex md:h-screen">
           {/* Navbar: Fixed width, does not overlap content */}
           <Navbar />
+          <MobileNav />
 
           {/* Content section: Takes up remaining space */}
           <main className="md:flex-1 md:pl-[22rem]">{children}</main>
