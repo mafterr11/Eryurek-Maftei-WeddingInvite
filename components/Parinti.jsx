@@ -43,7 +43,7 @@ const Parinti = () => {
       {/* Center flower */}
 
       <div className='relative flex items-center justify-center'>
-        <div className='relative w-32 h-18 scale-x-[-1] mb-8'>
+        <div className='relative w-28 xs:w-32 h-18 scale-x-[-1] mb-8'>
           <Image
             src='/assets/branch.png'
             fill
@@ -52,7 +52,7 @@ const Parinti = () => {
           />
         </div>
         <h2>Părinții</h2>
-        <div className='relative w-32 h-18 mb-8'>
+        <div className='relative w-28 xs:w-32 h-18 mb-8'>
           <Image
             src='/assets/branch.png'
             fill

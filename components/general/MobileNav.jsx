@@ -34,7 +34,7 @@ const navVariants = {
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="absolute top-5 right-5 z-50">
+    <div className="absolute top-5 right-5 z-50 md:hidden">
       <div
         onClick={() => setIsOpen(!isOpen)}
         className="active:scale-90 transition-all ease-in-out duration-200"
@@ -87,14 +87,14 @@ const MobileNav = () => {
 
           {/* Bottom part */}
           <div>
-            <div className="w-36 bg-amber-700 h-[1px] mx-auto mb-2" />
+            <div className="w-36 bg-[#7BA05B] h-[1px] mx-auto mb-2" />
             <p className="text-sm">Vă asteptăm cu drag!</p>
             <Heart
               size={24}
               strokeWidth={1.5}
               className="mx-auto"
-              color="red"
-              fill="red"
+              color="#7BA05B"
+              fill="#7BA05B"
             />
           </div>
         </div>
