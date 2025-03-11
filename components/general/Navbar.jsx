@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Heart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,7 +27,7 @@ const links = [
 
 const Navbar = () => {
   return (
-    <div className="max-md:hidden h-full w-[22rem] bg-[#A5BA8C] bg-center bg-no-repeat bg-cover fixed top-0 left-0">
+    <div className="h-screen md:w-[22rem] bg-accentGreen bg-center bg-no-repeat bg-cover fixed top-0 left-0 z-50 flex-shrink-0">
       {/* Main inside wrapper */}
       <div className="flex flex-col items-center justify-between py-16 h-full">
         {/* Top part wrapper */}
@@ -37,7 +36,7 @@ const Navbar = () => {
           <div className="flex flex-col items-center">
             <div className="relative w-28 h-12">
               <Image
-                src="/branch.png"
+                src="/assets/branch.png"
                 fill
                 alt="Branch icon"
                 className="object-contain"
@@ -64,7 +63,7 @@ const Navbar = () => {
 
         {/* Bottom part */}
         <div>
-          <div className=" w-36 bg-amber-900 h-[1px] mx-auto mb-2" />
+          <div className="w-36 bg-amber-700 h-[1px] mx-auto mb-2" />
           <p className="text-sm">Vă asteptăm cu drag!</p>
           <Heart
             size={24}
