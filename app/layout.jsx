@@ -2,6 +2,7 @@ import { Alex_Brush, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/general/Navbar";
 import MobileNav from "@/components/general/MobileNav";
+import LenisScroll from "@/components/general/Lenis";
 
 const libreBaskerville = Libre_Baskerville({
   variable: "--font-libreBaskerville",
@@ -22,17 +23,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body
         className={`${libreBaskerville.variable} ${alexBrush.variable}  antialiased `}
       >
-        <div className="md:flex md:h-screen">
+        <div className='md:flex md:h-screen'>
           {/* Navbar: Fixed width, does not overlap content */}
           <Navbar />
           <MobileNav />
+          <LenisScroll />
 
           {/* Content section: Takes up remaining space */}
-          <main className="md:flex-1 md:pl-[22rem]">{children}</main>
+          <main className='md:flex-1 md:pl-[22rem]'>{children}</main>
         </div>
       </body>
     </html>

@@ -1,10 +1,5 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme {
   /* Breakpoints */
   --breakpoint-xs: 400px;
@@ -20,9 +15,11 @@
 
   /* Colors */
   --color-accentGreen: #A5BA8C;
+  --color-lightGreen: #aec198;
 
   /* Assets */
-  --background-image-hero: url("/p3.jpg");
+  --background-image-hero: url("/treehouse.jpg");
+  --background-image-hero2: url("/treehouse2.jpg");
   --background-image-navbar: url("/p1.jpg");
 }
 
@@ -69,11 +66,5 @@
   }
   label {
     @apply mb-2 block font-normal text-black;
-  }
-  .subtitle {
-    @apply mb-8 text-lg font-light;
-  }
-  .section-title {
-    @apply relative flex w-max items-center justify-between gap-x-3 text-4xl font-bold;
   }
 }

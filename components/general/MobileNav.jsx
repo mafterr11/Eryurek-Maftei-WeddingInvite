@@ -27,14 +27,14 @@ const links = [
   },
 ];
 const navVariants = {
-  closed: { x: "-100%" },
-  open: { x: 0 },
+  closed: { x: "-100%", opacity: 0 },
+  open: { x: 0, opacity: 1},
 };
 
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="fixed top-5 right-5 z-50">
+    <div className="absolute top-5 right-5 z-50">
       <div
         onClick={() => setIsOpen(!isOpen)}
         className="active:scale-90 transition-all ease-in-out duration-200"
@@ -45,7 +45,7 @@ const MobileNav = () => {
         variants={navVariants}
         initial="closed"
         animate={isOpen ? "open" : "closed"}
-        transition={{ duration: 0.3, ease: "linear" }}
+        transition={{ duration: 0.35, ease: "linear" }}
         className="h-screen w-full bg-accentGreen bg-center bg-no-repeat bg-cover fixed top-0 left-0 z-50"
       >
         <div
