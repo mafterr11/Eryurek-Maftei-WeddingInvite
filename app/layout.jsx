@@ -1,14 +1,17 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Alex_Brush, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/general/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const libreBaskerville = Libre_Baskerville({
+  variable: "--font-libreBaskerville",
   subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const alexBrush = Alex_Brush({
+  variable: "--font-alexBrush",
   subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const metadata = {
@@ -20,8 +23,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${libreBaskerville.variable} ${alexBrush.variable}  antialiased `}
       >
+        <Navbar />
         {children}
       </body>
     </html>
