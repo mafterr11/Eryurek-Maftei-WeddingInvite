@@ -22,14 +22,14 @@ function SelectTrigger({ className, children, ...props }) {
   return (
     <SelectPrimitive.Trigger
       className={cn(
-        "border-gray-300 text-gray-700 focus:border-gray-500 focus:ring-2 focus:ring-gray-200 flex h-9 w-fit items-center justify-between gap-2 rounded-xs border bg-white px-3 py-2 text-sm shadow-sm outline-none focus:ring focus:ring-opacity-50 disabled:cursor-not-allowed disabled:opacity-50",
+        "border-gray-300 text-gray-700 focus:border-gray-500 cursor-pointer focus:ring-gray-200 flex h-9 w-fit items-center justify-between gap-2 rounded-xs border bg-white px-3 py-2 text-sm shadow-sm outline-none focus:ring focus:ring-opacity-50 disabled:cursor-not-allowed disabled:opacity-50",
         className
       )}
       {...props}
     >
       {children}
       <SelectPrimitive.Icon asChild>
-        <ChevronDownIcon className="w-4 h-4 text-gray-500" />
+        <ChevronDownIcon className='w-4 h-4 text-gray-500' />
       </SelectPrimitive.Icon>
     </SelectPrimitive.Trigger>
   );
@@ -48,7 +48,7 @@ function SelectContent({ className, children, position = "popper", ...props }) {
         {...props}
       >
         <SelectScrollUpButton />
-        <SelectPrimitive.Viewport className="p-1">
+        <SelectPrimitive.Viewport className='p-1'>
           {children}
         </SelectPrimitive.Viewport>
         <SelectScrollDownButton />
@@ -76,9 +76,9 @@ function SelectItem({ className, children, ...props }) {
       )}
       {...props}
     >
-      <span className="absolute right-2 flex h-3.5 items-center justify-center">
+      <span className='absolute right-2 flex h-3.5 items-center justify-center'>
         <SelectPrimitive.ItemIndicator>
-          <CheckIcon className="w-4 h-4 text-gray-500" />
+          <CheckIcon className='w-4 h-4 text-gray-500' />
         </SelectPrimitive.ItemIndicator>
       </span>
       <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
@@ -104,7 +104,7 @@ function SelectScrollUpButton({ className, ...props }) {
       )}
       {...props}
     >
-      <ChevronUpIcon className="w-4 h-4 text-gray-500" />
+      <ChevronUpIcon className='w-4 h-4 text-gray-500' />
     </SelectPrimitive.ScrollUpButton>
   );
 }
@@ -118,7 +118,7 @@ function SelectScrollDownButton({ className, ...props }) {
       )}
       {...props}
     >
-      <ChevronDownIcon className="w-4 h-4 text-gray-500" />
+      <ChevronDownIcon className='w-4 h-4 text-gray-500' />
     </SelectPrimitive.ScrollDownButton>
   );
 }
