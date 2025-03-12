@@ -9,7 +9,7 @@ const links = [
     name: "Acasă",
   },
   {
-    path: "",
+    path: "noi-doi",
     name: "Noi doi",
   },
   {
@@ -50,7 +50,8 @@ const Navbar = () => {
               to={link.path}
               duration={500}
               smooth={true}
-              className="hover:underline underline-offset-4 transition-all ease-linear duration-100 hover:scale-110"
+              spy={true}
+              className="hover:underline decoration-2 underline-offset-4 transition-all ease-linear duration-100 hover:scale-110 decoration-lightGreen"
             >
               {link.name}
             </Link>

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Noi = () => {
   return (
-    <div className=" bg-lightGreen py-16 xl:py-24">
+    <div id="noi-doi" className=" bg-lightGreen py-16 xl:py-24">
       <div className="flex flex-col md:flex-row items-center md:items-start gap-24 p-6 xl:max-w-[65%] mx-auto ">
         {/* Image Container */}
         <div className="relative w-full md:w-1/2 h-[35rem] z-10">
