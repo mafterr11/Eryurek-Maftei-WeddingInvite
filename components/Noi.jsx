@@ -12,7 +12,7 @@ const Noi = () => {
             fill
             className="object-cover rounded-sm"
           />
-          <div className="absolute top-5 left-5 w-full h-full border-10 border-black/50 -z-[1]"></div>
+          <div className="absolute top-5 left-5 w-full h-full border-10 border-accentGreen -z-[1]"></div>
         </div>
 
         {/* Text Container */}
