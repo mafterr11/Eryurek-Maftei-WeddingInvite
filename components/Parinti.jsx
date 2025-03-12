@@ -61,9 +61,9 @@ const Parinti = () => {
           />
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 font-bold relative max-md:text-center ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 font-bold relative max-md:text-center ">
         {parinti.map((p) => (
-          <p key={p.name}>{p.name}</p>
+          <p key={p.name} className="text-lg md:text-xl">{p.name}</p>
         ))}
       </div>
     </div>

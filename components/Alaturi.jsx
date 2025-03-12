@@ -8,10 +8,10 @@ export default function Alaturi() {
         <div className="flex justify-center mb-2">
           <Heart className="w-6 h-6 text-white" />
         </div>
-        <h2 className="text-2xl md:text-3xl italic font-light">
+        <h2 className="text-2xl md:text-3xl font-light">
           Vă așteptăm să fiți alături de noi!
         </h2>
-        <p className="text-3xl md:text-4xl font-bold mt-2">12 Aprilie 2025</p>
+        <p className="text-2xl md:text-4xl font-bold mt-2">30 Mai 2026</p>
       </div>
     </section>
   );

@@ -5,16 +5,16 @@ import { MapPin, Calendar, Clock } from "lucide-react";
 const events = [
   {
     title: "Cununia Civilă",
-    date: "12 Aprilie 2025",
-    time: "12:00",
-    location: "Oficiul Stării Civile, Strada Exemplar 12, București",
+    date: "30 Mai 2026",
+    time: "14:00",
+    location: "Oficiul Stării Civile, Strada Snagov, nr. 12",
     image: "/treehouse.jpg",
   },
   {
     title: "Petrecerea",
-    date: "12 Aprilie 2025",
-    time: "18:00",
-    location: "Restaurant Elegant, Strada Petrecerii 24, București",
+    date: "30 Mai 2026",
+    time: "15:00",
+    location: "Treehouse Cosoba, Strada Dambovita",
     image: "/treehouse2.jpg",
   },
 ];
@@ -22,16 +22,13 @@ const events = [
 export default function Eveniment() {
   return (
     <section className="py-16 bg-lightGreen">
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
-          Unde și când
-        </h2>
+      <div className="w-full xl:w-[75%] mx-auto px-6">
+        <h2 className="text-4xl font-bold text-center  mb-24">Unde și când</h2>
         <div className="grid md:grid-cols-2 gap-8">
           {events.map((event, index) => (
-            <motion.div
+            <div
               key={index}
-              whileHover={{ scale: 1.02 }}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden"
+              className="bg-white rounded-sm shadow-lg overflow-hidden"
             >
               <img
                 src={event.image}
@@ -51,14 +48,14 @@ export default function Eveniment() {
                   <p>{event.time}</p>
                 </div>
                 <div className="flex items-center text-gray-600 mt-2">
-                  <MapPin className="w-5 h-5 mr-2" />
+                  <MapPin className="w-5 h-5 mr-2 shrink-0" />
                   <p>{event.location}</p>
                 </div>
-                <button className="mt-4 w-full bg-red-500 hover:bg-red-600 text-white">
+                <button className="mt-4 w-full bg-accentGreen hover:bg-accentGreen/90 text-white rounded-sm p-2 transition-all duration-300 ease-in-out cursor-pointer hover:scale-[0.97]">
                   Vezi harta
                 </button>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
