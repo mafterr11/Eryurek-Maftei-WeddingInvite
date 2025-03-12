@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body
-        className={`${libreBaskerville.variable} ${alexBrush.variable}  antialiased `}
+        className={`${libreBaskerville.variable} ${alexBrush.variable}bg-lightGreen`}
       >
         <div className='md:flex md:h-screen'>
           {/* Navbar: Fixed width, does not overlap content */}
