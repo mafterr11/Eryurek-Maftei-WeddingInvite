@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
           <LenisScroll />
 
           {/* Content section: Takes up remaining space */}
-          <main className='md:flex-1 md:pl-[22rem] pb-44'>
+          <main className='md:flex-1 md:pl-[22rem]'>
             <div className='flex flex-col'>{children}</div>
           </main>
         </div>
