@@ -14,7 +14,7 @@ const Formular = () => {
       <form className='flex flex-col items-center gap-8 p-5 border-2 rounded-xs border-accentGreen bg-[#f8f8f7]'>
         <div className='text-center mb-8'>
           <p className='text-accentGreen font-semibold'>RSVP</p>
-          <h2 className='text-black'>Vei participa?</h2>
+          <h2 className='text-white bg-accentGreen p-2 rounded-xs'>Vei participa?</h2>
         </div>
         <Select>
           <SelectTrigger className='w-full'>
