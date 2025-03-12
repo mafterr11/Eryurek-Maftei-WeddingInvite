@@ -6,7 +6,7 @@ export default function Alaturi() {
       <div className="bg-black/30 absolute inset-0" />
       <div className="relative text-center text-white">
         <div className="flex justify-center mb-2">
-          <Heart className="w-6 h-6 text-white" />
+          <Heart className="w-6 h-6 text-white" fill="white" />
         </div>
         <h2 className="text-2xl md:text-3xl font-light">
           Vă așteptăm să fiți alături de noi!

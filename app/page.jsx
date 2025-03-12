@@ -1,6 +1,7 @@
 import Alaturi from "@/components/Alaturi";
 import Countdown from "@/components/Countdown";
 import Eveniment from "@/components/Eveniment";
+import Formular from "@/components/Formular";
 import Hero from "@/components/Hero";
 import Noi from "@/components/Noi";
 import Parinti from "@/components/Parinti";
@@ -14,6 +15,7 @@ const Home = () => {
       <Parinti />
       <Alaturi />
       <Eveniment />
+      <Formular />
     </>
   );
 };

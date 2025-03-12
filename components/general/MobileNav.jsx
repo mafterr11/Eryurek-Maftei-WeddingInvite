@@ -28,7 +28,7 @@ const links = [
 ];
 const navVariants = {
   closed: { x: "-100%", opacity: 0 },
-  open: { x: 0, opacity: 1},
+  open: { x: 0, opacity: 1 },
 };
 
 const MobileNav = () => {
