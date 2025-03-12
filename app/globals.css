@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@plugin "tailwindcss-animate";
-
 @theme {
   /* Breakpoints */
   --breakpoint-xs: 400px;
@@ -70,4 +68,3 @@
     @apply mb-2 block font-normal;
   }
 }
-

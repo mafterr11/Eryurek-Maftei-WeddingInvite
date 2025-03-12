@@ -13,11 +13,11 @@ const links = [
     name: "Noi doi",
   },
   {
-    path: "",
+    path: "unde-si-cand",
     name: "Unde și cand",
   },
   {
-    path: "",
+    path: "confirmare",
     name: "Confirmare",
   },
 ];

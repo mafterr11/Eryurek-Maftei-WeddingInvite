@@ -21,7 +21,7 @@ const events = [
 
 export default function Eveniment() {
   return (
-    <section className="py-16 bg-lightGreen">
+    <section id="unde-si-cand" className="py-16 bg-lightGreen">
       <div className="w-full xl:w-[75%] mx-auto px-6">
         <h2 className="text-4xl font-bold text-center  mb-24">Unde și când</h2>
         <div className="grid md:grid-cols-2 gap-8">
