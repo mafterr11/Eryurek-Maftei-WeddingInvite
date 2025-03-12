@@ -19,7 +19,7 @@ const Hero = () => {
             src="/assets/our_wedding.gif"
             fill
             alt="Our wedding text"
-            unoptimized={true}
+            unoptimized={true} 
           />
         </div>
       </div>
