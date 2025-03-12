@@ -17,7 +17,7 @@ const parinti = [
 
 const Parinti = () => {
   return (
-    <div className="py-16 xl:py-12 flex flex-col items-center justify-center gap-y-8 bg-lightGreen relative overflow-hidden">
+    <div className="py-16 xl:py-24 flex flex-col items-center justify-center gap-y-8 bg-lightGreen relative overflow-hidden">
       {/* Flower 1 */}
       <div className="absolute -bottom-14 -left-8 xl:-bottom-19 xl:-left-15">
         <div className="relative w-40 h-40 xl:w-96 xl:h-72 rotate-[50deg]">

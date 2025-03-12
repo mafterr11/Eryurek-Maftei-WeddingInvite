@@ -20,7 +20,7 @@
   /* Assets */
   --background-image-hero: url("/treehouse.jpg");
   --background-image-countdown: url("/treehouse2.jpg");
-  --background-image-navbar: url("/p1.jpg");
+  --background-image-alaturi: url("/alaturi.jpg");
 }
 
 @layer utilities {
