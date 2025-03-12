@@ -21,6 +21,7 @@
   --background-image-hero: url("/treehouse.jpg");
   --background-image-countdown: url("/treehouse2.jpg");
   --background-image-alaturi: url("/alaturi.jpg");
+  --background-image-newlyWeds: url("/newly-weds.jpg");
 }
 
 @layer utilities {
