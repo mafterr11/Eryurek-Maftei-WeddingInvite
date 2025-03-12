@@ -14,8 +14,8 @@
   --font-alexBrush: var(--font-alex-brush);
 
   /* Colors */
-  --color-accentGreen: #A5BA8C;
-  --color-lightGreen: #aec198;
+  --color-accentGreen: #4b5f4b;
+  --color-lightGreen: #7f8d72;
 
   /* Assets */
   --background-image-hero: url("/treehouse.jpg");
@@ -37,7 +37,7 @@
   }
 
   body {
-    @apply font-libreBaskerville overflow-x-hidden tracking-[0.5px] text-black/95;
+    @apply font-libreBaskerville overflow-x-hidden tracking-[0.5px] text-white;
   }
 
   h1,
@@ -59,12 +59,12 @@
     @apply text-[22px] font-semibold;
   }
   p {
-    @apply leading-8 text-black/80;
+    @apply leading-8 ;
   }
   a {
     @apply cursor-pointer transition-all duration-300;
   }
   label {
-    @apply mb-2 block font-normal text-black;
+    @apply mb-2 block font-normal;
   }
 }

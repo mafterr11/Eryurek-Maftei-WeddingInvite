@@ -16,7 +16,9 @@ const Countdown = () => {
 
       return {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        hours: Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        ),
         minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
         seconds: Math.floor((difference % (1000 * 60)) / 1000),
       };
@@ -32,31 +34,33 @@ const Countdown = () => {
   }, []);
 
   if (!timeLeft) {
-    return <p className="text-center text-white">Loading countdown...</p>;
+    return <p className="text-center ">Loading countdown...</p>;
   }
 
   return (
-    <div className='flex flex-col items-center justify-center min-h-1/2 bg-countdown bg-fixed bg-center text-white relative max-md:py-20'>
-      <div className='absolute inset-0 bg-black/35' />
-      <div className='relative flex items-center flex-col justify-center'>
-        <h1 className='text-2xl xl:text-4xl font-bold mb-4'>Ziua noastră cea mare!</h1>
-        <div className='grid grid-cols-2 md:grid-cols-4 max-xl:space-y-6 space-x-4 text-2xl font-semibold'>
-          <div className='flex flex-col items-center'>
-            <span className='text-2xl xl:text-5xl'>{timeLeft.days}</span>
-            <span>Zile</span>
-          </div>
-          <div className='flex flex-col items-center'>
-            <span className='text-2xl xl:text-5xl'>{timeLeft.hours}</span>
-            <span>Ore</span>
-          </div>
-          <div className='flex flex-col items-center'>
-            <span className='text-2xl xl:text-5xl'>{timeLeft.minutes}</span>
-            <span>Minute</span>
-          </div>
-          <div className='flex flex-col items-center'>
-            <span className='text-2xl xl:text-5xl'>{timeLeft.seconds}</span>
-            <span>Secunde</span>
-          </div>
+    <div className="flex flex-col items-center justify-center min-h-1/2 bg-countdown bg-fixed bg-center  relative max-md:py-20">
+      <div className="absolute inset-0 bg-black/35" />
+      <div className="relative flex items-center flex-col justify-center">
+        <h1 className="text-2xl xl:text-4xl font-bold mb-4">
+          Ziua noastră cea mare!
+        </h1>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-2xl font-semibold">
+          {[
+            { value: timeLeft.days, label: "Zile" },
+            { value: timeLeft.hours, label: "Ore" },
+            { value: timeLeft.minutes, label: "Minute" },
+            { value: timeLeft.seconds, label: "Secunde" },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center justify-center aspect-square"
+            >
+              <span className="text-3xl xl:text-5xl font-bold">
+                {item.value}
+              </span>
+              <span className="text-lg">{item.label}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
