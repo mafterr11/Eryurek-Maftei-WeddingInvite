@@ -61,7 +61,7 @@ const MobileNav = () => {
           <div className="flex flex-col items-center">
             <div className="relative w-28 h-12">
               <Image
-                src="/assets/branch.png"
+                src="/assets/branch2.png"
                 fill
                 alt="Branch icon"
                 className="object-contain"

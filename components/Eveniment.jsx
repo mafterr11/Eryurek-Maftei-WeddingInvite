@@ -49,7 +49,7 @@ export default function Eveniment() {
                 </div>
                 <div className="flex items-center text-gray-600 mt-2">
                   <MapPin className="w-5 h-5 mr-2 shrink-0" />
-                  <p>{event.location}</p>
+                  <p className="leading-normal">{event.location}</p>
                 </div>
                 <button className="mt-4 w-full bg-accentGreen hover:bg-accentGreen/90 text-white rounded-sm p-2 transition-all duration-300 ease-in-out cursor-pointer hover:scale-[0.97]">
                   Vezi harta
