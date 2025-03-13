@@ -30,7 +30,7 @@ const navVariants = {
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="relative z-50 md:hidden">
+    <div className="relative z-50 xl:hidden">
       <div
         onClick={() => setIsOpen(!isOpen)}
         className="fixed top-5 right-5 transition-all duration-200 ease-in-out active:scale-90"

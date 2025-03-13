@@ -27,14 +27,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${libreBaskerville.variable} ${alexBrush.variable} bg-lightGreen relative`}
       >
-        <div className="md:flex md:h-screen">
+        <div className="xl:flex xl:h-screen">
           {/* Navbar: Fixed width, does not overlap content */}
           <Navbar />
           <MobileNav />
           <LenisScroll />
 
           {/* Content section: Takes up remaining space */}
-          <main className="md:flex-1 md:pl-[22rem]">
+          <main className="xl:flex-1 xl:pl-[22rem]">
             <div className="flex flex-col">{children}</div>
           </main>
         </div>

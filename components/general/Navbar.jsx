@@ -24,7 +24,7 @@ const links = [
 
 const Navbar = () => {
   return (
-    <div className="bg-accentGreen fixed top-0 left-0 z-50 h-screen flex-shrink-0 bg-cover bg-center bg-no-repeat max-md:hidden md:w-[22rem]">
+    <div className="bg-accentGreen fixed top-0 left-0 z-50 h-screen flex-shrink-0 bg-cover bg-center bg-no-repeat max-xl:hidden xl:w-[22rem]">
       {/* Main inside wrapper */}
       <div className="flex h-full flex-col items-center justify-between py-16">
         {/* Name Date */}

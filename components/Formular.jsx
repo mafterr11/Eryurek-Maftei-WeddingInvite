@@ -47,7 +47,7 @@ const Formular = () => {
   };
 
   return (
-    <div className="relative flex h-full items-center justify-center">
+    <div className="relative flex h-full items-center justify-center ">
       <form
         onSubmit={validateForm(submitForm)}
         className="border-accentGreen flex flex-col items-center gap-8 rounded-xs border-2 bg-[#f8f8f7] p-5"
@@ -65,72 +65,84 @@ const Formular = () => {
             {...register("nume")}
             type="text"
             placeholder="Numele tău"
-            className="w-full border border-black p-2 text-black"
+            className="w-full cursor-pointer border border-black p-2 text-black"
           />
           {errors.nume && (
-            <p className="absolute top-full left-0 mt-1 text-xs text-red-500">
+            <p className="absolute top-full left-0 text-xs text-red-500">
               {errors.nume.message}
             </p>
           )}
         </div>
 
         {/* Conditional Fields Based on Attendance */}
-       
-            <div className="relative w-full">
-              <select {...register("numarPersoane")} className="w-full border border-black p-2 text-black/50">
-                <option value="">Alege numărul de persoane</option>
-                <option value="o persoana">O persoană</option>
-                <option value="doua persoane">Două persoane</option>
-              </select>
-              {errors.numarPersoane && (
-                <p className="absolute top-full left-0 mt-1 text-xs text-red-500">
-                  {errors.numarPersoane.message}
-                </p>
-              )}
-            </div>
 
-            <div className="relative w-full">
-              <select {...register("copii")} className="w-full border border-black p-2 text-black/50">
-                <option value="">Vei veni cu copiii?</option>
-                <option value="nu">Nu</option>
-                <option value="1 copil">1 copil</option>
-                <option value="2 copii">2 copii</option>
-                <option value="3 copii">3 copii</option>
-                <option value="4 copii">4 copii</option>
-                <option value="5 copii">5 copii</option>
-              </select>
-              {errors.copii && (
-                <p className="absolute top-full left-0 mt-1 text-xs text-red-500">
-                  {errors.copii.message}
-                </p>
-              )}
-            </div>
+        <div className="relative w-full">
+          <select
+            {...register("numarPersoane")}
+            className="w-full cursor-pointer border border-black p-2 text-black/50"
+          >
+            <option value="">Alege numărul de persoane</option>
+            <option value="o persoana">O persoană</option>
+            <option value="doua persoane">Două persoane</option>
+          </select>
+          {errors.numarPersoane && (
+            <p className="absolute top-full left-0 text-xs text-red-500">
+              {errors.numarPersoane.message}
+            </p>
+          )}
+        </div>
 
-            <div className="relative w-full">
-              <select {...register("cazare")} className="w-full border border-black p-2 text-black/50">
-                <option value="">Dorești cazare?</option>
-                <option value="da">Da</option>
-                <option value="nu">Nu</option>
-              </select>
-              {errors.cazare && (
-                <p className="absolute top-full left-0 mt-1 text-xs text-red-500">
-                  {errors.cazare.message}
-                </p>
-              )}
-            </div>
+        <div className="relative w-full">
+          <select
+            {...register("copii")}
+            className="w-full cursor-pointer border border-black p-2 text-black/50"
+          >
+            <option value="">Vei veni cu copiii?</option>
+            <option value="nu">Nu</option>
+            <option value="1 copil">1 copil</option>
+            <option value="2 copii">2 copii</option>
+            <option value="3 copii">3 copii</option>
+            <option value="4 copii">4 copii</option>
+            <option value="5 copii">5 copii</option>
+          </select>
+          {errors.copii && (
+            <p className="absolute top-full left-0 text-xs text-red-500">
+              {errors.copii.message}
+            </p>
+          )}
+        </div>
 
-            <div className="relative w-full">
-              <select {...register("meniu")} className="w-full border border-black p-2 text-black/50">
-                <option value="">Alege tipul meniului</option>
-                <option value="meniu standard">Meniu standard</option>
-                <option value="meniu vegetarian">Meniu vegetarian</option>
-              </select>
-              {errors.meniu && (
-                <p className="absolute top-full left-0 mt-1 text-xs text-red-500">
-                  {errors.meniu.message}
-                </p>
-              )}
-            </div>
+        <div className="relative w-full">
+          <select
+            {...register("cazare")}
+            className="w-full cursor-pointer border border-black p-2 text-black/50"
+          >
+            <option value="">Dorești cazare?</option>
+            <option value="da">Da</option>
+            <option value="nu">Nu</option>
+          </select>
+          {errors.cazare && (
+            <p className="absolute top-full left-0 text-xs text-red-500">
+              {errors.cazare.message}
+            </p>
+          )}
+        </div>
+
+        <div className="relative w-full">
+          <select
+            {...register("meniu")}
+            className="w-full cursor-pointer border border-black p-2 text-black/50"
+          >
+            <option value="">Alege tipul meniului</option>
+            <option value="meniu standard">Meniu standard</option>
+            <option value="meniu vegetarian">Meniu vegetarian</option>
+          </select>
+          {errors.meniu && (
+            <p className="absolute top-full left-0 text-xs text-red-500">
+              {errors.meniu.message}
+            </p>
+          )}
+        </div>
 
         {/* Submit Buttons */}
         <div className="mt-3 flex items-center gap-5 max-md:flex-col">
@@ -140,7 +152,7 @@ const Formular = () => {
               setValue("attending", "yes");
               setAttending("yes");
             }}
-            className="bg-accentGreen min-w-28 rounded-xs p-2 transition-all hover:scale-95"
+            className="bg-accentGreen min-w-28 cursor-pointer rounded-xs p-2 transition-all hover:scale-95"
           >
             Confirm prezența
           </button>
@@ -151,7 +163,7 @@ const Formular = () => {
               setValue("attending", "no");
               setAttending("no");
             }}
-            className="bg-accentGreen min-w-28 rounded-xs p-2 transition-all hover:scale-95"
+            className="bg-accentGreen min-w-28 cursor-pointer rounded-xs p-2 transition-all hover:scale-95"
           >
             Nu pot să particip
           </button>

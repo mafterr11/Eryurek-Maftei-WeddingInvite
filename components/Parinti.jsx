@@ -4,8 +4,8 @@ const Parinti = () => {
   return (
     <div className="relative flex flex-col items-center justify-center gap-y-8 overflow-hidden py-16 xl:py-24">
       {/* Flower 1 */}
-      <div className="absolute -bottom-14 -left-8 xl:-bottom-19 xl:-left-15">
-        <div className="relative h-40 w-40 rotate-[50deg] xl:h-72 xl:w-96">
+      <div className="absolute -bottom-14 -left-8 xl:-bottom-19 xl:-left-15 md:-bottom-19 md:-left-10">
+        <div className="relative h-40 w-40 rotate-[50deg] md:h-56 md:w-56 xl:h-72 xl:w-96">
           <Image
             src="/assets/flower2.png"
             fill
@@ -15,8 +15,8 @@ const Parinti = () => {
         </div>
       </div>
       {/* Flower 2 */}
-      <div className="absolute -top-14 -right-8 xl:-top-19 xl:-right-14">
-        <div className="relative h-40 w-40 -rotate-[130deg] xl:h-72 xl:w-96">
+      <div className="absolute -top-14 -right-8 md:-top-19 md:-right-10 xl:-top-19 xl:-right-14">
+        <div className="relative h-40 w-40 -rotate-[130deg] md:h-56 md:w-56 xl:h-72 xl:w-96">
           <Image
             src="/assets/flower2.png"
             fill
