@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/general/Navbar";
 import MobileNav from "@/components/general/MobileNav";
 import LenisScroll from "@/components/general/Lenis";
-
+import { Toaster } from "@/components/ui/sonner"
 const libreBaskerville = Libre_Baskerville({
   variable: "--font-libreBaskerville",
   subsets: ["latin"],
@@ -32,11 +32,11 @@ export default function RootLayout({ children }) {
           <Navbar />
           <MobileNav />
           <LenisScroll />
-
           {/* Content section: Takes up remaining space */}
           <main className="xl:flex-1 xl:pl-[22rem]">
             <div className="flex flex-col">{children}</div>
           </main>
+          <Toaster />
         </div>
       </body>
     </html>

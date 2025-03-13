@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { handleSubmit } from "@/lib/actions";
 import { useState } from "react";
+import { toast } from "sonner";
 
 // Full validation schema
 const fullSchema = z.object({
@@ -28,7 +29,7 @@ const declineSchema = z.object({
 
 const Formular = () => {
   const [attending, setAttending] = useState("yes"); // Track button selection
-
+  const [isPending, setIsPending] = useState(false);
   const {
     register,
     handleSubmit: validateForm,
@@ -40,8 +41,17 @@ const Formular = () => {
   });
 
   const submitForm = async (data) => {
+    setIsPending(true);
     const res = await handleSubmit(data);
-    if (res) reset();
+    if (res) {
+      reset();
+      attending === "yes"
+        ? toast("Confirmarea a fost trimisă. Va mulțumim!")
+        : toast("Mesaj trimis! Ne pare rău ca nu puteți ajunge :(");
+    } else {
+      toast("Vă rugăm să reincercați");
+    }
+    setIsPending(false);
   };
 
   return (
@@ -134,7 +144,7 @@ const Formular = () => {
             }}
             className="bg-accentGreen min-w-28 cursor-pointer rounded-xs p-2 transition-all hover:scale-95"
           >
-            Confirm prezența
+            {isPending && attending === "yes" ? "Se trimite..." : "Confirm prezența"}
           </button>
 
           <button
@@ -145,7 +155,7 @@ const Formular = () => {
             }}
             className="bg-accentGreen min-w-28 cursor-pointer rounded-xs p-2 transition-all hover:scale-95"
           >
-            Nu pot să particip
+            {isPending && attending === "no" ? "Se trimite..." : "Nu pot să particip"}
           </button>
         </div>
       </form>
