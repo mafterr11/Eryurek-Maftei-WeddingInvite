@@ -58,7 +58,7 @@ const Formular = () => {
     <div className="relative flex h-full items-center justify-center">
       <form
         onSubmit={validateForm(submitForm)}
-        className="border-accentGreen flex flex-col items-center gap-8 rounded-xs border-2 bg-[#f8f8f7] p-5"
+        className="border-accentGreen flex flex-col items-center gap-8 rounded-xs border-2 bg-[#f8f8f7] p-5 xs:max-md:p-10"
       >
         <div className="mb-8 text-center">
           <p className="text-accentGreen font-semibold">RSVP</p>
@@ -142,11 +142,13 @@ const Formular = () => {
               setValue("attending", "yes");
               setAttending("yes");
             }}
-            className="bg-accentGreen min-w-28 cursor-pointer rounded-xs p-2 transition-all hover:scale-95"
+            className="bg-accentGreen flex w-[180px] cursor-pointer items-center justify-center rounded-xs p-2 transition-all hover:scale-95"
           >
-            {isPending && attending === "yes"
-              ? "Se trimite..."
-              : "Confirm prezența"}
+            {isPending && attending === "yes" ? (
+              <span className="opacity-70">Se trimite...</span>
+            ) : (
+              "Confirm prezența"
+            )}
           </button>
 
           <button
@@ -155,11 +157,13 @@ const Formular = () => {
               setValue("attending", "no");
               setAttending("no");
             }}
-            className="bg-accentGreen min-w-28 cursor-pointer rounded-xs p-2 transition-all hover:scale-95"
+            className="bg-accentGreen flex w-[180px] cursor-pointer items-center justify-center rounded-xs p-2 transition-all hover:scale-95"
           >
-            {isPending && attending === "no"
-              ? "Se trimite..."
-              : "Nu pot să particip"}
+            {isPending && attending === "no" ? (
+              <span className="opacity-70">Se trimite...</span>
+            ) : (
+              "Nu pot să particip"
+            )}
           </button>
         </div>
       </form>
