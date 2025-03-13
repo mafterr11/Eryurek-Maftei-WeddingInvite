@@ -144,7 +144,9 @@ const Formular = () => {
             }}
             className="bg-accentGreen min-w-28 cursor-pointer rounded-xs p-2 transition-all hover:scale-95"
           >
-            {isPending && attending === "yes" ? "Se trimite..." : "Confirm prezența"}
+            {isPending && attending === "yes"
+              ? "Se trimite..."
+              : "Confirm prezența"}
           </button>
 
           <button
@@ -155,7 +157,9 @@ const Formular = () => {
             }}
             className="bg-accentGreen min-w-28 cursor-pointer rounded-xs p-2 transition-all hover:scale-95"
           >
-            {isPending && attending === "no" ? "Se trimite..." : "Nu pot să particip"}
+            {isPending && attending === "no"
+              ? "Se trimite..."
+              : "Nu pot să particip"}
           </button>
         </div>
       </form>
