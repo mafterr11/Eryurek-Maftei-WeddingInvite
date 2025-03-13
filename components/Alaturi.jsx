@@ -2,16 +2,16 @@ import { Heart } from "lucide-react";
 
 export default function Alaturi() {
   return (
-    <section className="relative w-full h-48 md:h-64 bg-cover bg-bottom flex items-center justify-center bg-alaturi bg-fixed">
-      <div className="bg-black/30 absolute inset-0" />
+    <section className="bg-alaturi relative flex h-48 w-full items-center justify-center bg-cover bg-fixed bg-bottom md:h-64">
+      <div className="absolute inset-0 bg-black/30" />
       <div className="relative text-center text-white">
-        <div className="flex justify-center mb-2">
-          <Heart className="w-6 h-6 text-white" fill="white" />
+        <div className="mb-2 flex justify-center">
+          <Heart className="h-6 w-6 text-white" fill="white" />
         </div>
-        <h2 className="text-2xl md:text-3xl font-light">
+        <h2 className="text-2xl font-light md:text-3xl">
           Vă așteptăm să fiți alături de noi!
         </h2>
-        <p className="text-2xl md:text-4xl font-bold mt-2">30 Mai 2026</p>
+        <p className="mt-2 text-2xl font-bold md:text-4xl">30 Mai 2026</p>
       </div>
     </section>
   );

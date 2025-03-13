@@ -23,19 +23,19 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body
         className={`${libreBaskerville.variable} ${alexBrush.variable} bg-lightGreen relative`}
       >
-        <div className='md:flex md:h-screen'>
+        <div className="md:flex md:h-screen">
           {/* Navbar: Fixed width, does not overlap content */}
           <Navbar />
           <MobileNav />
           <LenisScroll />
 
           {/* Content section: Takes up remaining space */}
-          <main className='md:flex-1 md:pl-[22rem]'>
-            <div className='flex flex-col'>{children}</div>
+          <main className="md:flex-1 md:pl-[22rem]">
+            <div className="flex flex-col">{children}</div>
           </main>
         </div>
       </body>

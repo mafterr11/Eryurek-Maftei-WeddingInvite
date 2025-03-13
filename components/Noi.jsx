@@ -2,33 +2,33 @@ import Image from "next/image";
 
 const Noi = () => {
   return (
-    <div id="noi-doi" className=" bg-lightGreen py-16 xl:py-24">
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-24 p-6 xl:max-w-[65%] mx-auto ">
+    <div id="noi-doi" className="bg-lightGreen py-16 xl:py-24">
+      <div className="mx-auto flex flex-col items-center gap-24 p-6 md:flex-row md:items-start xl:max-w-[65%]">
         {/* Image Container */}
-        <div className="relative w-full md:w-1/2 h-[35rem] z-10">
+        <div className="relative z-10 h-[35rem] w-full md:w-1/2">
           <Image
             src="/noi.jpg"
             alt="Example"
             fill
-            className="object-cover rounded-sm"
+            className="rounded-sm object-cover"
           />
-          <div className="absolute top-5 left-5 w-full h-full border-10 border-accentGreen -z-[1]"></div>
+          <div className="border-accentGreen absolute top-5 left-5 -z-[1] h-full w-full border-10"></div>
         </div>
 
         {/* Text Container */}
-        <div className="md:w-1/2 text-left self-center">
-          <h2 className="text-2xl font-bold mb-12 ">
+        <div className="self-center text-left md:w-1/2">
+          <h2 className="mb-12 text-2xl font-bold">
             Cu bucurie împărtășim o veste specială:
           </h2>
-          <p className="mt-6 ">
+          <p className="mt-6">
             În curând vom face un <strong>pas important</strong> împreună, iar
             ziua aceasta nu ar fi completă fără voi alături.
           </p>
-          <p className="mt-6 ">
+          <p className="mt-6">
             <strong>Vă invităm</strong> să ne fiți aproape într-un moment plin
             de emoție, în care drumurile noastre devin unul singur.
           </p>
-          <p className="mt-6 ">Așteptăm cu nerăbdare să sărbătorim împreună!</p>
+          <p className="mt-6">Așteptăm cu nerăbdare să sărbătorim împreună!</p>
         </div>
       </div>
     </div>

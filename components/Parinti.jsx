@@ -17,10 +17,10 @@ const parinti = [
 
 const Parinti = () => {
   return (
-    <div className="py-16 xl:py-24 flex flex-col items-center justify-center gap-y-8 relative overflow-hidden">
+    <div className="relative flex flex-col items-center justify-center gap-y-8 overflow-hidden py-16 xl:py-24">
       {/* Flower 1 */}
       <div className="absolute -bottom-14 -left-8 xl:-bottom-19 xl:-left-15">
-        <div className="relative w-40 h-40 xl:w-96 xl:h-72 rotate-[50deg]">
+        <div className="relative h-40 w-40 rotate-[50deg] xl:h-72 xl:w-96">
           <Image
             src="/assets/flower2.png"
             fill
@@ -31,7 +31,7 @@ const Parinti = () => {
       </div>
       {/* Flower 2 */}
       <div className="absolute -top-14 -right-8 xl:-top-19 xl:-right-14">
-        <div className="relative  w-40 h-40 xl:w-96 xl:h-72 -rotate-[130deg]">
+        <div className="relative h-40 w-40 -rotate-[130deg] xl:h-72 xl:w-96">
           <Image
             src="/assets/flower2.png"
             fill
@@ -43,7 +43,7 @@ const Parinti = () => {
       {/* Center flower */}
 
       <div className="relative flex items-center justify-center">
-        <div className="relative w-28 xs:w-32 md:w-40 h-18 scale-x-[-1] mb-8">
+        <div className="relative mb-8 h-18 w-26 scale-x-[-1] md:w-40">
           <Image
             src="/assets/branch2.png"
             fill
@@ -52,7 +52,7 @@ const Parinti = () => {
           />
         </div>
         <h2>Părinții</h2>
-        <div className="relative w-28 xs:w-32 md:w-40 h-18 mb-8">
+        <div className="relative mb-8 h-18 w-26 md:w-40">
           <Image
             src="/assets/branch2.png"
             fill
@@ -61,7 +61,7 @@ const Parinti = () => {
           />
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 font-bold relative max-md:text-center ">
+      <div className="relative grid grid-cols-1 gap-5 font-bold max-md:text-center md:grid-cols-2">
         {parinti.map((p) => (
           <p key={p.name} className="text-lg md:text-xl">
             {p.name}
