@@ -1,20 +1,5 @@
 import Image from "next/image";
 
-const parinti = [
-  {
-    name: "Eryurek Tuncay",
-  },
-  {
-    name: " Eryurek Catalina",
-  },
-  {
-    name: "Maftei Viorel",
-  },
-  {
-    name: " Maftei Anisoara",
-  },
-];
-
 const Parinti = () => {
   return (
     <div className="relative flex flex-col items-center justify-center gap-y-8 overflow-hidden py-16 xl:py-24">
@@ -62,11 +47,11 @@ const Parinti = () => {
         </div>
       </div>
       <div className="relative grid grid-cols-1 gap-5 font-bold max-md:text-center md:grid-cols-2">
-        {parinti.map((p) => (
-          <p key={p.name} className="text-lg md:text-xl">
-            {p.name}
-          </p>
-        ))}
+        <p className="text-lg md:text-xl">Eryurek Tuncay</p>
+        <p className="text-lg md:text-xl">Eryurek Catalina</p>
+        <p className="text-2xl md:hidden">&</p>
+        <p className="text-lg md:text-xl">Maftei Viorel</p>
+        <p className="text-lg md:text-xl">Maftei Anisoara</p>
       </div>
     </div>
   );
