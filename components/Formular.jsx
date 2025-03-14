@@ -58,7 +58,7 @@ const Formular = () => {
     <div className="relative flex h-full items-center justify-center">
       <form
         onSubmit={validateForm(submitForm)}
-        className="border-accentGreen flex flex-col items-center gap-8 rounded-xs border-2 bg-[#f8f8f7] p-5 xs:max-md:p-10"
+        className="border-accentGreen xs:max-md:p-10 flex flex-col items-center gap-8 rounded-xs border-2 bg-[#f8f8f7] p-5"
       >
         <div className="mb-8 text-center">
           <p className="text-accentGreen font-semibold">RSVP</p>
@@ -138,6 +138,7 @@ const Formular = () => {
         <div className="mt-3 flex items-center gap-5 max-md:flex-col">
           <button
             type="submit"
+            disabled={isPending}
             onClick={() => {
               setValue("attending", "yes");
               setAttending("yes");
@@ -153,6 +154,7 @@ const Formular = () => {
 
           <button
             type="submit"
+            disabled={isPending}
             onClick={() => {
               setValue("attending", "no");
               setAttending("no");
