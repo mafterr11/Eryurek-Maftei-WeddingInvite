@@ -9,21 +9,21 @@ import { toast } from "sonner";
 
 // Full validation schema
 const fullSchema = z.object({
-  nume: z.string().min(2, { message: "Va rog adaugati-va numele!" }),
-  prenume: z.string().min(2, { message: "Va rog adaugati-va prenumele!" }),
-  numarPersoane: z.enum(["o persoana", "doua persoane"], {
-    message: "Selectati cate persoane!",
+  nume: z.string().min(2, { message: "Vă rog adăugați-vă numele!" }),
+  prenume: z.string().min(2, { message: "Vă rog adăugați-vă prenumele!" }),
+  numarPersoane: z.enum(["o persoană", "doua persoane"], {
+    message: "Selectați câte persoane!",
   }),
   copii: z.enum(["nu", "1 copil", "2 copii", "3 copii", "4 copii", "5 copii"], {
-    message: "Cati copii vor veni?",
+    message: "Cați copii vor veni?",
   }),
-  attending: z.enum(["yes", "no"], { message: "Va rog completati" }),
+  attending: z.enum(["yes", "no"], { message: "Vă rog completați" }),
 });
 
 // Decline validation schema (only name required)
 const declineSchema = z.object({
-  nume: z.string().min(2, { message: "Va rog adaugati-va numele!" }),
-  prenume: z.string().min(2, { message: "Va rog adaugati-va prenumele!" }),
+  nume: z.string().min(2, { message: "Vă rog adăugați-vă numele!" }),
+  prenume: z.string().min(2, { message: "Vă rog adăugați-vă prenumele!" }),
   attending: z.enum(["yes", "no"]),
 });
 
@@ -46,7 +46,7 @@ const Formular = () => {
     if (res) {
       reset();
       attending === "yes"
-        ? toast("Confirmarea a fost trimisă. Va mulțumim!")
+        ? toast("Confirmarea a fost trimisă. Vă mulțumim!")
         : toast("Mesaj trimis! Ne pare rău ca nu puteți ajunge :(");
     } else {
       toast("Vă rugăm să reincercați");
