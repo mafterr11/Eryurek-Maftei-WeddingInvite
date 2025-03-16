@@ -11,7 +11,7 @@ import { toast } from "sonner";
 const fullSchema = z.object({
   nume: z.string().min(2, { message: "Vă rog adăugați-vă numele!" }),
   prenume: z.string().min(2, { message: "Vă rog adăugați-vă prenumele!" }),
-  numarPersoane: z.enum(["o persoană", "doua persoane"], {
+  numarPersoane: z.enum(["o persoana", "doua persoane"], {
     message: "Selectați câte persoane!",
   }),
   copii: z.enum(["nu", "1 copil", "2 copii", "3 copii", "4 copii", "5 copii"], {
@@ -40,9 +40,9 @@ const Formular = () => {
     resolver: zodResolver(attending === "yes" ? fullSchema : declineSchema),
   });
 
-  const submitForm = async (data) => {
+  const submitForm = async (formData) => {
     setIsPending(true);
-    const res = await handleSubmit(data);
+    const res = await handleSubmit(formData);
     if (res) {
       reset();
       attending === "yes"
