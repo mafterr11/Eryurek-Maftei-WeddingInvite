@@ -77,7 +77,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-lightGreen); /* Light green track */
+  background: #97a887; /* Light green track */
 }
 
 ::-webkit-scrollbar-thumb {
