@@ -7,7 +7,6 @@ import { handleSubmit } from "@/lib/actions";
 import { useState } from "react";
 import { toast } from "sonner";
 
-// Full validation schema
 const fullSchema = z.object({
   nume: z.string().min(2, { message: "Vă rog adăugați-vă numele!" }),
   prenume: z.string().min(2, { message: "Vă rog adăugați-vă prenumele!" }),
@@ -18,18 +17,20 @@ const fullSchema = z.object({
     message: "Cați copii vor veni?",
   }),
   attending: z.enum(["yes", "no"], { message: "Vă rog completați" }),
+  file: z.any().optional(),
 });
 
-// Decline validation schema (only name required)
 const declineSchema = z.object({
-  nume: z.string().min(2, { message: "Vă rog adăugați-vă numele!" }),
-  prenume: z.string().min(2, { message: "Vă rog adăugați-vă prenumele!" }),
+  nume: z.string().min(2),
+  prenume: z.string().min(2),
   attending: z.enum(["yes", "no"]),
+  file: z.any().optional(),
 });
 
 const Formular = () => {
-  const [attending, setAttending] = useState("yes"); // Track button selection
+  const [attending, setAttending] = useState("yes");
   const [isPending, setIsPending] = useState(false);
+  const [fileName, setFileName] = useState("");
   const {
     register,
     handleSubmit: validateForm,
@@ -40,16 +41,23 @@ const Formular = () => {
     resolver: zodResolver(attending === "yes" ? fullSchema : declineSchema),
   });
 
-  const submitForm = async (formData) => {
+  const submitForm = async (data) => {
+    const formData = new FormData();
+    for (const key in data) {
+      if (key !== "file") {
+        formData.append(key, data[key]);
+      }
+    }
+    if (data.file && data.file[0]) {
+      formData.append("file", data.file[0]);
+    }
     setIsPending(true);
     const res = await handleSubmit(formData);
-    if (res) {
+    if (res?.success) {
       reset();
-      attending === "yes"
-        ? toast("Confirmarea a fost trimisă. Vă mulțumim!")
-        : toast("Mesaj trimis! Ne pare rău ca nu puteți ajunge :(");
+      toast("Confirmarea a fost trimisă!");
     } else {
-      toast("Vă rugăm să reincercați");
+      toast("Eroare la trimitere.");
     }
     setIsPending(false);
   };
@@ -131,6 +139,20 @@ const Formular = () => {
             <p className="absolute top-full left-0 text-xs text-red-500">
               {errors.copii.message}
             </p>
+          )}
+        </div>
+
+        {/* FILE SELECT */}
+        <div className="relative w-full">
+          <input
+            type="file"
+            {...register("file")}
+            onChange={(e) => setFileName(e.target.files?.[0]?.name || "")}
+            className="file:bg-accentGreen block w-full cursor-pointer rounded-xs border border-black bg-white text-black transition file:mr-4 file:cursor-pointer file:rounded-xs file:border-0 file:px-4 file:py-2 file:font-semibold file:text-white hover:file:bg-green-700"
+          />
+
+          {fileName && (
+            <p className="mt-1 truncate text-sm text-gray-600">{fileName}</p>
           )}
         </div>
 
