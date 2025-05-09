@@ -38,7 +38,7 @@ const Countdown = () => {
   }
 
   return (
-    <div className="bg-countdown relative flex min-h-1/2 flex-col items-center justify-center bg-fixed bg-[bottom_center] py-20">
+    <div className="bg-countdown relative flex min-h-1/2 flex-col items-center justify-center bg-fixed bg-bottom py-20">
       <div className="absolute inset-0 bg-black/35" />
       <div className="relative flex flex-col items-center justify-center">
         <h1 className="mb-4 text-2xl font-bold xl:text-4xl">
