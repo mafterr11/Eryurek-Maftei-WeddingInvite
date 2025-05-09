@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "framer-motion";
 import { MapPin, Calendar, Clock } from "lucide-react";
 
 const events = [
@@ -7,15 +6,18 @@ const events = [
     title: "Cununia Civilă",
     date: "30 Mai 2026",
     time: "14:00",
-    location: "Oficiul Stării Civile, Strada Snagov, nr. 12",
-    image: "/treehouse.jpg",
+    location: "DJ101B, Ghermănești 077170",
+    image: "/snagov.jpg",
+    map: "https://maps.app.goo.gl/7QVUn3Ugk97rcdL67"
   },
   {
     title: "Petrecerea",
     date: "30 Mai 2026",
     time: "15:00",
-    location: "Treehouse Cosoba, Strada Dambovita",
-    image: "/treehouse2.jpg",
+    location: "Strada Ion C. Băicoianu 13, Tâncăbești 077167",
+    image: "/jolie3.jpg",
+    map: "https://maps.app.goo.gl/upY8RsHpXZSoeZaW8"
+
   },
 ];
 
@@ -51,9 +53,15 @@ export default function Eveniment() {
                   <MapPin className="mr-2 h-5 w-5 shrink-0" />
                   <p className="leading-normal">{event.location}</p>
                 </div>
-                <button className="bg-accentGreen hover:bg-accentGreen/90 mt-4 w-full cursor-pointer rounded-sm p-2 text-white transition-all duration-300 ease-in-out hover:scale-[0.97]">
-                  Vezi harta
-                </button>
+                <a
+                  href={event.map}// Replace with your desired coordinates or place
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="bg-accentGreen hover:bg-accentGreen/90 mt-4 w-full cursor-pointer rounded-sm p-2 text-white transition-all duration-300 ease-in-out hover:scale-[0.97]">
+                    Vezi harta
+                  </button>
+                </a>
               </div>
             </div>
           ))}
