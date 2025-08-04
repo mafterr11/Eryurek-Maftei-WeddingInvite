@@ -58,7 +58,7 @@ const Formular = () => {
     <div className="relative flex h-full items-center justify-center">
       <form
         onSubmit={validateForm(submitForm)}
-        className="border-accentGreen xs:max-md:p-10 flex flex-col items-center gap-8 rounded-xs border-2 bg-[#f8f8f7] p-5"
+        className="border-accentGreen xs:max-md:p-8 flex flex-col items-center gap-8 rounded-xs border-2 bg-[#f8f8f7] p-5 max-md:w-[94%]"
       >
         <div className="mb-8 text-center">
           <p className="text-accentGreen font-semibold">RSVP</p>

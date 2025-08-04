@@ -30,7 +30,7 @@ export default function Eveniment() {
           {events.map((event, index) => (
             <div
               key={index}
-              className="overflow-hidden rounded-sm bg-white shadow-lg"
+              className="  rounded-sm bg-white shadow-lg"
             >
               <img
                 src={event.image}
