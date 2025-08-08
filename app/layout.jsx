@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
           <MobileNav />
           <LenisScroll />
           {/* Content section: Takes up remaining space */}
-          <main className="xl:flex-1 xl:pl-[22rem] overflow-x-hidden">
+          <main className="xl:flex-1 xl:pl-[22rem] max-md:overflow-x-hidden">
             <div className="flex flex-col">{children}</div>
           </main>
           <Toaster />
