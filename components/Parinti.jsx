@@ -47,11 +47,11 @@ const Parinti = () => {
         </div>
       </div>
       <div className="relative grid grid-cols-1 gap-5 font-bold max-md:text-center md:grid-cols-2">
-        <p className="text-lg md:text-xl">Eryurek Tuncay</p>
-        <p className="text-lg md:text-xl">Eryurek Catalina</p>
+        <p className="text-lg md:text-xl">Eryürek Tuncay</p>
+        <p className="text-lg md:text-xl">Eryürek Cătălina</p>
         <p className="text-2xl md:hidden">&</p>
         <p className="text-lg md:text-xl">Maftei Viorel</p>
-        <p className="text-lg md:text-xl">Maftei Anisoara</p>
+        <p className="text-lg md:text-xl">Maftei Anișoara</p>
       </div>
     </div>
   );

@@ -5,16 +5,16 @@ const events = [
   {
     title: "Cununia Civilă",
     date: "30 Mai 2026",
-    time: "14:00",
-    location: "DJ101B, Ghermănești 077170",
-    image: "/snagov.jpg",
-    map: "https://maps.app.goo.gl/7QVUn3Ugk97rcdL67"
+    time: "15:00",
+    location: "Grădinile Jolie - Tâncăbești",
+    image: "/treehouse.jpg",
+    map: "https://maps.app.goo.gl/upY8RsHpXZSoeZaW8"
   },
   {
     title: "Petrecerea",
     date: "30 Mai 2026",
-    time: "15:00",
-    location: "Strada Ion C. Băicoianu 13, Tâncăbești 077167",
+    time: "16:00",
+    location: "Grădinile Jolie - Tâncăbești",
     image: "/jolie3.jpg",
     map: "https://maps.app.goo.gl/upY8RsHpXZSoeZaW8"
 

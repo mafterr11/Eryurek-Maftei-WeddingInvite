@@ -12,7 +12,7 @@ const Hero = () => {
           <h1 className="font-alexBrush mb-3 font-thin tracking-widest">
             Deniz & Alexandru
           </h1>
-          <h4 className="text-center">30 Mai 2026 - Bucuresti</h4>
+          <h4 className="text-center">30 Mai 2026 - București</h4>
         </div>
         <div className="absolute bottom-18 h-44 w-44">
           <Image

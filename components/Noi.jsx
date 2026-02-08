@@ -7,7 +7,7 @@ const Noi = () => {
         {/* Image Container */}
         <div className="relative z-10 h-[35rem] w-full md:w-1/2">
           <Image
-            src="/noi.jpg"
+            src="/noi.jpeg"
             alt="Example"
             fill
             className="rounded-sm object-cover"

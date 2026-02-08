@@ -6,7 +6,6 @@ export const EmailTemplate = ({
   numarPersoane,
   copii,
   attending,
-  imageUrl,
 }) => (
   <div>
     <h1>{attending === "yes" ? "RSVP Confirmation" : "NO ATTENDANCE"}</h1>
@@ -24,11 +23,6 @@ export const EmailTemplate = ({
         <p>
           <strong>Copii:</strong> {copii}
         </p>
-        {imageUrl && (
-          <p>
-            <strong>Imagine:</strong> <a href={imageUrl}>{imageUrl}</a>
-          </p>
-        )}
       </>
     )}
     {attending === "no" && <p>Guest has declined the invitation.</p>}
