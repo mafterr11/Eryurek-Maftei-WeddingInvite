@@ -2,7 +2,7 @@ import { Heart } from "lucide-react";
 
 export default function Alaturi() {
   return (
-    <section className="bg-alaturi relative flex h-[30rem] w-full items-center justify-center bg-cover max-md:bg-center bg-no-repeat bg-fixed bg-center md:h-[30rem]">
+    <section className="bg-alaturi relative flex h-[30rem] w-full items-center justify-center bg-cover max-md:bg-center bg-no-repeat bg-center bg-center md:h-[30rem]">
       <div className="absolute inset-0  bg-black/30" />
       <div className="relative text-center text-white">
         <div className="mb-2 flex justify-center">
