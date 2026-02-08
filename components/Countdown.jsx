@@ -38,32 +38,41 @@ const Countdown = () => {
   }
 
   return (
-    <div className="bg-countdown relative flex flex-col items-center justify-center bg-fixed bg-no-repeat max-md:bg-contain bg-bottom py-20 md:h-[30rem]">
-      <div className="absolute -inset-0.5 md:inset-0 bg-black/35" />
-      <div className="relative flex flex-col items-center justify-center">
-        <h1 className="mb-4 text-2xl font-bold xl:text-4xl">
-          Ziua noastră cea mare!
-        </h1>
-        <div className="grid grid-cols-2 gap-4 text-2xl font-semibold md:grid-cols-4">
-          {[
-            { value: timeLeft.days, label: "Zile" },
-            { value: timeLeft.hours, label: "Ore" },
-            { value: timeLeft.minutes, label: "Minute" },
-            { value: timeLeft.seconds, label: "Secunde" },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="flex aspect-square flex-col items-center justify-center"
-            >
-              <span className="text-3xl font-bold xl:text-5xl">
-                {item.value}
-              </span>
-              <span className="text-lg">{item.label}</span>
-            </div>
-          ))}
+   <div
+  className="
+    bg-countdown bg-position-[50%_75%] relative w-full overflow-hidden
+    flex flex-col items-center justify-center
+    bg-cover bg-no-repeat
+    py-20 min-h-[60vh] md:min-h-[480px]
+    bg-scroll md:bg-fixed
+  "
+>
+  <div className="absolute inset-0 bg-black/25" />
+
+  <div className="relative flex flex-col items-center justify-center">
+    <h1 className="mb-4 text-2xl font-bold xl:text-4xl">
+      Ziua noastră cea mare!
+    </h1>
+
+    <div className="grid grid-cols-2 gap-4 text-2xl font-semibold md:grid-cols-4">
+      {[
+        { value: timeLeft.days, label: "Zile" },
+        { value: timeLeft.hours, label: "Ore" },
+        { value: timeLeft.minutes, label: "Minute" },
+        { value: timeLeft.seconds, label: "Secunde" },
+      ].map((item, index) => (
+        <div
+          key={index}
+          className="flex aspect-square flex-col items-center justify-center"
+        >
+          <span className="text-3xl font-bold xl:text-5xl">{item.value}</span>
+          <span className="text-lg">{item.label}</span>
         </div>
-      </div>
+      ))}
     </div>
+  </div>
+</div>
+
   );
 };
 

@@ -7,7 +7,7 @@ const events = [
     date: "30 Mai 2026",
     time: "15:00",
     location: "Grădinile Jolie - Tâncăbești",
-    image: "/treehouse.jpg",
+    image: "/treehouse.png",
     map: "https://maps.app.goo.gl/upY8RsHpXZSoeZaW8"
   },
   {
@@ -15,7 +15,7 @@ const events = [
     date: "30 Mai 2026",
     time: "16:00",
     location: "Grădinile Jolie - Tâncăbești",
-    image: "/jolie3.jpg",
+    image: "/jolie3.png",
     map: "https://maps.app.goo.gl/upY8RsHpXZSoeZaW8"
 
   },
