@@ -19,7 +19,7 @@ const alexBrush = Alex_Brush({
 
 export const metadata = {
   title: "🕊️ Eryurek x Maftei 🕊️",
-  description: "Invitația noastră digitală",
+  description: "Invitație",
 };
 
 export default function RootLayout({ children }) {
